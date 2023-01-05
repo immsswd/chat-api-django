@@ -13,6 +13,6 @@ class ChatList(generics.ListCreateAPIView):
     permission_classes  = [permissions.IsAuthenticated]
     
     
-    # def perform_create < this function name will be call before trying to save data into DB
+    # def perform_create: this function name will be call before trying to save data into DB
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)

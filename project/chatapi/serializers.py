@@ -1,7 +1,8 @@
 from rest_framework import serializers
-from . models import Chat
+from . models import Chat, Person
 
 # create class Object for Chat Serializers
+
 class ChatSerializer(serializers.ModelSerializer):
     
     # ReadOnlyField
@@ -11,4 +12,5 @@ class ChatSerializer(serializers.ModelSerializer):
     class Meta:
         model   = Chat
         # which field do you want to serialize
-        fields  = ['id', 'text', 'created', 'user', 'user_id']
+        fields  = ['id', 'text', 'created', 'user', 'user_id', 'to']
+        
